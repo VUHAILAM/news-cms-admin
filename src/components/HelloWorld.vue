@@ -70,6 +70,11 @@
         </v-row>
       </v-col>
     </v-row>
+
+    <v-row>
+      <p>Value:</p>
+      <p>{{ testMessage }}</p>
+    </v-row>
   </v-container>
 </template>
 
@@ -131,5 +136,13 @@ export default Vue.extend({
       },
     ],
   }),
+
+  computed: {
+    testMessage: {
+      get(): string {
+        return this.$store.getters["posts/testMessage"];
+      },
+    },
+  },
 });
 </script>
