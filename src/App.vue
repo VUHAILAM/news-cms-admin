@@ -21,17 +21,23 @@
       <v-divider></v-divider>
 
       <v-list nav dense>
-        <v-list-item link>
+        <v-list-item link @click="$router.push('/posts')">
           <v-list-item-icon>
             <v-icon>mdi-newspaper-variant-multiple</v-icon>
           </v-list-item-icon>
           <v-list-item-title>Posts</v-list-item-title>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link @click="$router.push('/crawler')">
           <v-list-item-icon>
             <v-icon>mdi-spider-thread</v-icon>
           </v-list-item-icon>
           <v-list-item-title>Crawler</v-list-item-title>
+        </v-list-item>
+        <v-list-item link @click="$router.push('/about')">
+          <v-list-item-icon>
+            <v-icon>mdi-information-outline</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>About</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
